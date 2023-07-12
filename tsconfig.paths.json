@@ -7,9 +7,10 @@
       "@constants/*": ["src/constants/*"],
       "@context/*": ["src/context/*"],
       "@hooks/*": ["src/hooks/*"],
-      "@mocks/*": ["src/mocks/*"],
       "@pages/*": ["src/pages/*"],
-      "@styles/*": ["src/styles/*"],
+      "@reducers/*": ["src/reducers/*"],
+      "@routes/*": ["src/routes/*"],
+      "@type/*": ["src/type/*"],
       "@utils/*": ["src/utils/*"]
     }
   }
