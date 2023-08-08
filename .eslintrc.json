@@ -1,0 +1,30 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["prettier", "eslint:recommended", "plugin:react/recommended", "plugin:@typescript-eslint/recommended", "plugin:@tanstack/eslint-plugin-query/recommended"],
+  "overrides": [],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["prettier", "@typescript-eslint", "react", "react-hooks", "@tanstack/query", "@emotion"],
+  "rules": {
+    "max-len": [2, { "code": 100 }],
+    "react/react-in-jsx-scope": 0,
+    "camelcase": 2,
+    "spaced-comment": 2,
+    "quotes": [2, "single"],
+    "no-duplicate-imports": 2,
+    "react/no-unescaped-entities": 0
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  }
+}
