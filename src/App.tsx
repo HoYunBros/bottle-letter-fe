@@ -1,10 +1,15 @@
-import React from 'react';
+import { RecoilRoot } from 'recoil';
+import { MantineProvider } from '@mantine/core';
 
 const App = () => {
   return (
-    <div>
-      <h2>Let's get started!</h2>
-    </div>
+    <MantineProvider withGlobalStyles withNormalizeCSS>
+      <RecoilRoot>
+        <div>
+          <h2>Let's get started!</h2>
+        </div>
+      </RecoilRoot>
+    </MantineProvider>
   );
 };
 
