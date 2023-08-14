@@ -1,13 +1,13 @@
 import { RecoilRoot } from 'recoil';
 import { MantineProvider } from '@mantine/core';
 
+import Router from '@routes/Router';
+
 const App = () => {
   return (
     <MantineProvider withGlobalStyles withNormalizeCSS>
       <RecoilRoot>
-        <div>
-          <h2>Let's get started!</h2>
-        </div>
+        <Router />
       </RecoilRoot>
     </MantineProvider>
   );
