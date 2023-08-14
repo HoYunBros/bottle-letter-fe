@@ -1,14 +1,13 @@
-import { RouterProvider } from 'react-router-dom';
 import { RecoilRoot } from 'recoil';
 import { MantineProvider } from '@mantine/core';
 
-import router from '@routes/router';
+import Router from '@routes/Router';
 
 const App = () => {
   return (
     <MantineProvider withGlobalStyles withNormalizeCSS>
       <RecoilRoot>
-        <RouterProvider router={router} />
+        <Router />
       </RecoilRoot>
     </MantineProvider>
   );
