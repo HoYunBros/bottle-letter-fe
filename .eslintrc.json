@@ -3,7 +3,14 @@
     "browser": true,
     "es2021": true
   },
-  "extends": ["prettier", "eslint:recommended", "plugin:react/recommended", "plugin:@typescript-eslint/recommended", "plugin:@tanstack/eslint-plugin-query/recommended"],
+  "extends": [
+    "prettier",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@tanstack/eslint-plugin-query/recommended",
+    "plugin:storybook/recommended"
+  ],
   "overrides": [],
   "parserOptions": {
     "ecmaFeatures": {
@@ -12,9 +19,16 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["prettier", "@typescript-eslint", "react", "react-hooks", "@tanstack/query", "@emotion"],
+  "plugins": ["prettier", "@typescript-eslint", "react", "react-hooks", "@tanstack/query"],
   "rules": {
-    "max-len": [2, { "code": 100 }],
+    "max-len": [
+      2,
+      {
+        "code": 100,
+        "ignoreComments": true,
+        "ignoreStrings": true
+      }
+    ],
     "react/react-in-jsx-scope": 0,
     "camelcase": 2,
     "spaced-comment": 2,

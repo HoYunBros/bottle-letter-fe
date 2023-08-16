@@ -1,15 +1,17 @@
 import { RecoilRoot } from 'recoil';
-import { MantineProvider } from '@mantine/core';
+import { ThemeProvider } from 'styled-components';
+
+import { lightTheme } from '@styles/theme';
 
 import Router from '@routes/Router';
 
 const App = () => {
   return (
-    <MantineProvider withGlobalStyles withNormalizeCSS>
+    <ThemeProvider theme={lightTheme}>
       <RecoilRoot>
         <Router />
       </RecoilRoot>
-    </MantineProvider>
+    </ThemeProvider>
   );
 };
 
