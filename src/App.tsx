@@ -1,17 +1,15 @@
 import { RecoilRoot } from 'recoil';
 import { ThemeProvider } from 'styled-components';
 
-import GlobalStyle from '@styles/GlobalStyles';
+import { GlobalStyles } from '@styles/GlobalStyles.style';
 import { lightTheme } from '@styles/theme';
 
 import Router from '@routes/Router';
 
 const App = () => {
-  // themepro
-  
   return (
     <>
-      <GlobalStyle />
+      <GlobalStyles />
       <ThemeProvider theme={lightTheme}>
         <RecoilRoot>
           <Router />

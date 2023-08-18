@@ -1,9 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
 import { reset } from 'styled-reset';
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle`
   ${reset}
-  /* other styles */
+  * {
+    border: none;  
+    }
 `;
-
-export default GlobalStyle;
