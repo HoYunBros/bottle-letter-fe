@@ -29,12 +29,12 @@
         "ignoreStrings": true
       }
     ],
-    "react/react-in-jsx-scope": 0,
-    "camelcase": 2,
-    "spaced-comment": 2,
-    "quotes": [2, "single"],
-    "no-duplicate-imports": 2,
-    "react/no-unescaped-entities": 0
+    "react/react-in-jsx-scope": "off",
+    "camelcase": "error",
+    "spaced-comment": "error",
+    "quotes": ["error", "single"],
+    "no-duplicate-imports": "error",
+    "react/no-unescaped-entities": "off"
   },
   "settings": {
     "import/resolver": {
