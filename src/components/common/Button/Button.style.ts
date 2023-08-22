@@ -18,7 +18,7 @@ const $size = {
     line-height: 48px;
   `,
   large: css`
-    width: 200px;
+    width: 240px;
     height: 56px;
     padding: 0 24px;
     border-radius: 8px;
@@ -43,9 +43,10 @@ const $status = {
   `,
 };
 
-const $Button = styled.button<{ size: keyof typeof $size; status: keyof typeof $status }>`
+const Button = styled.button<{ size: keyof typeof $size; status: keyof typeof $status }>`
   ${({ size }) => $size[size]};
   ${({ status }) => $status[status]};
+  cursor: pointer;
 `;
 
-export { $Button };
+export { Button };
