@@ -8,7 +8,7 @@ interface InputProps {
 }
 
 const Input = ({ value, onChange, placeholder, size = 'medium' }: InputProps) => {
-  return <S.$Input value={value} onChange={onChange} placeholder={placeholder} size={size} />;
+  return <S.Input value={value} onChange={onChange} placeholder={placeholder} size={size} />;
 };
 
 export default Input;
