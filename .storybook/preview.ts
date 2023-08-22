@@ -1,14 +1,9 @@
 // .storybook/preview.js
 import { withThemeFromJSXProvider } from '@storybook/addon-styling';
-import { ThemeProvider, createGlobalStyle } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
+import { GlobalStyles } from '../src/styles/GlobalStyles.style';
 
 import { darkTheme, lightTheme } from '../src/styles/theme';
-
-const GlobalStyles = createGlobalStyle`
-  body {
-    font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  }
-`;
 
 export const decorators = [
   withThemeFromJSXProvider({
