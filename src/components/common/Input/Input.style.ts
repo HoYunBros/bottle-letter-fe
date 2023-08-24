@@ -18,7 +18,7 @@ const $size = {
     line-height: 48px;
   `,
   large: css`
-    width: 200px;
+    width: 240px;
     height: 56px;
     padding: 0 24px;
     border-radius: 8px;
@@ -31,12 +31,15 @@ const $color = css`
   color: ${({ theme }) => theme.colors.inverse};
   background-color: ${({ theme }) => theme.colors.default};
   border: 1px solid ${({ theme }) => theme.colors.inverse};
-  
+  outline: none;
+  &:focus {
+    border: 1px solid ${({ theme }) => theme.colors.primary};
+  }
 `;
 
-const $Input = styled.input<{ size: keyof typeof $size }>`
+const Input = styled.input<{ size: keyof typeof $size }>`
   ${({ size }) => $size[size]};
   ${$color}
 `;
 
-export { $Input };
+export { Input };

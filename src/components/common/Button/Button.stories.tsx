@@ -28,5 +28,8 @@ export const Default: Story = {
         options: ['primary', 'secondary', 'tertiary'],
       },
     },
+    onClick: {
+      action: 'onClick',
+    },
   },
 };

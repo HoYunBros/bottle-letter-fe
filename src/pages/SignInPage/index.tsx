@@ -1,8 +1,51 @@
+import { useState } from 'react';
+
+import * as S from './SignInPage.style';
+import Layout from '@components/common/Layout';
+import Input from '@components/common/Input';
+import Button from '@components/common/Button';
+
 const SignInPage = () => {
+  const [id, setId] = useState('');
+  const [password, setPassword] = useState('');
+  const handleIdInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setId(e.target.value);
+  };
+  const handlePasswordInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPassword(e.target.value);
+  };
   return (
-    <section>
-      <h1>로그인 페이지입니다.</h1>
-    </section>
+    <Layout>
+      <S.Header>Bottle Letter</S.Header>
+      <S.Main>
+        <Input value={id} onChange={handleIdInputChange} size="large" placeholder="아이디" />
+        <Input
+          value={password}
+          onChange={handlePasswordInputChange}
+          size="large"
+          placeholder="비밀번호"
+        />
+        <Button
+          onClick={() => {
+            console.log('로그인 버튼 클릭');
+          }}
+          size="large"
+          status="primary"
+        >
+          로그인
+        </Button>
+        <Button
+          onClick={() => {
+            console.log('회원가입 버튼 클릭');
+          }}
+          size="large"
+          status="tertiary"
+        >
+          회원가입
+        </Button>
+      </S.Main>
+      <S.Footer>ⓒ 2023. HoYunBros all rights reserved.</S.Footer>
+    </Layout>
   );
 };
 
