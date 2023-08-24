@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useInput } from '@hooks/useInput';
 
 import * as S from './SignInPage.style';
 import Layout from '@components/common/Layout';
@@ -6,14 +6,9 @@ import Input from '@components/common/Input';
 import Button from '@components/common/Button';
 
 const SignInPage = () => {
-  const [id, setId] = useState('');
-  const [password, setPassword] = useState('');
-  const handleIdInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setId(e.target.value);
-  };
-  const handlePasswordInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPassword(e.target.value);
-  };
+  const [id, handleIdInputChange] = useInput('');
+  const [password, handlePasswordInputChange] = useInput('');
+
   return (
     <Layout>
       <S.Header>Bottle Letter</S.Header>
