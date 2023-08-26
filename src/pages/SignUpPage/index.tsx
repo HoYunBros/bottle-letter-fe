@@ -1,6 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 
+import { ROUTE_PATH } from '@routes/router';
 import { useInput } from '@hooks/useInput';
+
 import Layout from '@components/common/Layout';
 import Input from '@components/common/Input';
 import Button from '@components/common/Button';
@@ -32,7 +34,7 @@ const SignUpPage = () => {
         <Button
           onClick={() => {
             // TODO: 회원가입 후 메인 페이지 이동 시, api 통신
-            navigate('/');
+            navigate(ROUTE_PATH.MAIN);
           }}
           size="large"
           status="primary"
@@ -41,7 +43,7 @@ const SignUpPage = () => {
         </Button>
         <Button
           onClick={() => {
-            navigate('/signin');
+            navigate(ROUTE_PATH.SIGN_IN);
           }}
           size="large"
           status="tertiary"
