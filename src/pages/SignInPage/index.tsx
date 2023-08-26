@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 
-import { ROUTE_PATH } from '@routes/Router';
+import { ROUTE_PATH } from '@routes/router';
 import { useInput } from '@hooks/useInput';
 
 import Layout from '@components/common/Layout';
