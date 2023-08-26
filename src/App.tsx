@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from '@styles/GlobalStyles.style';
 import { lightTheme } from '@styles/theme';
 
-import Router from '@routes/Router';
+import Router from '@routes/router';
 
 const App = () => {
   return (
