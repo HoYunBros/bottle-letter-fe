@@ -1,13 +1,17 @@
+import { useNavigate } from 'react-router-dom';
+
+import { ROUTE_PATH } from '@routes/Router';
 import { useInput } from '@hooks/useInput';
 
-import * as S from './SignInPage.style';
 import Layout from '@components/common/Layout';
 import Input from '@components/common/Input';
 import Button from '@components/common/Button';
+import * as S from './SignInPage.style';
 
 const SignInPage = () => {
   const [id, handleIdInputChange] = useInput('');
   const [password, handlePasswordInputChange] = useInput('');
+  const navigate = useNavigate();
 
   return (
     <Layout>
@@ -22,7 +26,7 @@ const SignInPage = () => {
         />
         <Button
           onClick={() => {
-            console.log('로그인 버튼 클릭');
+            navigate(ROUTE_PATH.MAIN);
           }}
           size="large"
           status="primary"
@@ -31,7 +35,7 @@ const SignInPage = () => {
         </Button>
         <Button
           onClick={() => {
-            console.log('회원가입 버튼 클릭');
+            navigate(ROUTE_PATH.SIGN_UP);
           }}
           size="large"
           status="tertiary"
