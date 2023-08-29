@@ -28,21 +28,12 @@ React에서 상태 관리를 할 수 있도록 도와주는 라이브러리로, 
 React에서 API를 호출할 때 사용하는 라이브러리로, 기존의 Redux-Saga, Redux-Thunk와 같은 라이브러리보다 사용하기 쉽고,
 코드의 가독성을 높일 수 있다. 또한, 캐싱 기능을 제공하기 때문에, API 호출을 최소화할 수 있다.
 
-### Emotion
+### styled-components
 
 CSS-in-JS 라이브러리로, CSS를 JavaScript에서 작성할 수 있도록 도와준다. 따라서, CSS를 작성할 때 발생할 수 있는
 클래스 네이밍 충돌을 방지할 수 있으며, CSS를 작성할 때 발생할 수 있는 브라우저 호환성 문제를 해결할 수 있다.
 
-styled-components를 사용하지 않고 Emotion을 사용하는 이유
-
-- Emotion이 일반적으로 styled-components보다 더 빠른 렌더링 속도와 더 낮은 메모리 사용량을 가지고 있다.
-- Emotion의 css props 기능: Mantine UI를 사용할 예정인데, 개인적으로 Emotion의 css props가 좀더 커스텀한 UI를 구현할 때 유용하다고 생각한다.
-
-### Mantine UI
-
-React에서 사용할 수 있는 UI 라이브러리로, Material UI와 같은 라이브러리보다 더욱 가볍고 커스텀하기 쉽다.
-또, TypeScript를 지원하고 Emotion에 기반하여 만들어졌기 때문에 사용하기 편리할 것이라 생각했다.
-제일 중요했던 건 소스코드가 정말 깔끔하게 정리되어서 공개되어있다는 점이었다. 각 컴포넌트에 대한 코드가 상세하게 공개되어있어 학습하기 좋을 것이라 생각했다.
+> 사실 Emotion의 styled를 사용하려 했었다. 단순하게 Emotion을 사용해본 적이 없었다는 것과 styled-components보다 성능이 좋다고 해서 Emotion을 사용하려 했었다. 헌데 몇몇 자료를 서치해보니 Emotion의 성능이 styled-components보다 좋다는 것은 사실이지만, 미미한 차이라고 한다. 그리고 사실 styled-components도 유의미하게 자주 사용해본 게 아니라서, styled-components를 사용하기로 결정했다.
 
 ### Jest
 
@@ -58,7 +49,6 @@ ex. h1 태그에서 h2로 변경되었을 때, Enzyme을 사용하면 h1 태그�
 React Testing Library를 사용하면 사용자의 관점에서 테스트하기 때문에, h1 태그가 존재하지 않아도 테스트가 통과한다.
 (사용자의 입장에선 지금 페이지의 heading이 h1 태그인지 h2 태그인지는 중요하지 않다. 그저 heading이 존재하여 어떤 내용을 담고 있는지만 알면 된다.)
 
-storybook을 사용하지 않고 React Testing Library를 사용하는 이유
+### Storybook
 
-- storybook은 컴포넌트의 UI를 테스트하기 위한 라이브러리이다. 하지만, React Testing Library는 사용자의 관점에서 테스트하기 위한 라이브러리이다.
-- Mantine UI를 사용할 예정이기 때문에, story를 작성하여 얻는 이점이 크지 않다고 생각했다.
+React에서 컴포넌트를 개발할 때 사용하는 라이브러리로, 컴포넌트를 개발할 때 더욱 편리하게 개발할 수 있도록 도와준다. 특히 작은 단위의 컴포넌트들(주로 common)을 개발할 때 더욱 편리하다. 해서 작은 단위의 컴포넌트는 Storybook을 사용하고 큰 단위의 컴포넌트(page)들에서는 유저의 액션에 맞게 테스트를 작성할 수 있는 React Testing Library를 사용할 예정이다.
