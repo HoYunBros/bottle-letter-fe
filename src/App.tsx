@@ -1,5 +1,4 @@
 import { RouterProvider } from 'react-router-dom';
-import { RecoilRoot } from 'recoil';
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { ThemeProvider } from 'styled-components';
@@ -16,9 +15,7 @@ const App = () => {
       <GlobalStyles />
       <ThemeProvider theme={lightTheme}>
         <QueryClientProvider client={queryClient}>
-          <RecoilRoot>
-            <RouterProvider router={router} />
-          </RecoilRoot>
+          <RouterProvider router={router} />
           <ReactQueryDevtools initialIsOpen={false} />
         </QueryClientProvider>
       </ThemeProvider>
