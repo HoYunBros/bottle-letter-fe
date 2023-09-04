@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { createBrowserRouter } from 'react-router-dom';
 
 import MainPage from '@pages/MainPage';
 import SignUpPage from '@pages/SignUpPage';
@@ -11,16 +11,17 @@ export const ROUTE_PATH = Object.freeze({
   ERROR: '/error',
 });
 
-const Router = () => {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path={ROUTE_PATH.MAIN} element={<MainPage />} />
-        <Route path={ROUTE_PATH.SIGN_UP} element={<SignUpPage />} />
-        <Route path={ROUTE_PATH.SIGN_IN} element={<SignInPage />} />
-      </Routes>
-    </BrowserRouter>
-  );
-};
-
-export default Router;
+export const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <MainPage />,
+  },
+  {
+    path: '/signup',
+    element: <SignUpPage />,
+  },
+  {
+    path: '/signin',
+    element: <SignInPage />,
+  },
+]);
